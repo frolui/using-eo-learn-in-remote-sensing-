@@ -1,0 +1,1011 @@
+2019-10-03 12:19:23,156 eolearn.core.eoworkflow DEBUG    Computing S2L1CWCSInput(*(), **{'bbox': BBox(((523716.9414061075, 5724655.036680756), (526118.5742464965, 5727228.931828612)), crs=EPSG:32635), 'time_interval': ['2019-04-18', '2019-04-20']})
+2019-10-03 12:19:23,140 eolearn.core.eoworkflow DEBUG    Computing CountValid(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+    NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_VALID: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {}
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((523716.9414061075, 5727228.931828612), (526118.5742464965, 5729802.826976469)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{})
+2019-10-03 12:19:23,156 sentinelhub.ogc DEBUG    date_interval=('2019-04-18T00:00:00', '2019-04-20T23:59:59')
+2019-10-03 12:19:23,156 sentinelhub.ogc DEBUG    URL=https://services.sentinel-hub.com/ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=523716.9414061075%2C5724655.036680756%2C526118.5742464965%2C5727228.931828612&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0
+2019-10-03 12:19:23,156 eolearn.core.eoworkflow DEBUG    Removing intermediate result for CountValid
+2019-10-03 12:19:23,156 eolearn.core.eoworkflow DEBUG    Computing SaveToDisk(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+    NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_VALID: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {
+    VALID_COUNT: numpy.ndarray(shape=(257, 240, 1), dtype=int64)
+  }
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((523716.9414061075, 5727228.931828612), (526118.5742464965, 5729802.826976469)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{'eopatch_folder': 'eopatch_2'})
+2019-10-03 12:19:23,156 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2019-10-03 12:19:23,156 eolearn.core.eodata DEBUG    Saving (FeatureType.DATA, BANDS) to ./eopatches_small/eopatch_2_tmp_1570094363.156355\data\BANDS.npy
+2019-10-03 12:19:23,156 eolearn.core.eodata DEBUG    Saving (FeatureType.DATA, CLP) to ./eopatches_small/eopatch_2_tmp_1570094363.156355\data\CLP.npy
+2019-10-03 12:19:23,171 eolearn.core.eodata DEBUG    Saving (FeatureType.DATA, NBR) to ./eopatches_small/eopatch_2_tmp_1570094363.156355\data\NBR.npy
+2019-10-03 12:19:23,171 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK, IS_DATA) to ./eopatches_small/eopatch_2_tmp_1570094363.156355\mask\IS_DATA.npy
+2019-10-03 12:19:23,171 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK, CLM) to ./eopatches_small/eopatch_2_tmp_1570094363.156355\mask\CLM.npy
+2019-10-03 12:19:23,171 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK, IS_VALID) to ./eopatches_small/eopatch_2_tmp_1570094363.156355\mask\IS_VALID.npy
+2019-10-03 12:19:23,171 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK_TIMELESS, VALID_COUNT) to ./eopatches_small/eopatch_2_tmp_1570094363.156355\mask_timeless\VALID_COUNT.npy
+2019-10-03 12:19:23,187 eolearn.core.eodata DEBUG    Saving (FeatureType.META_INFO, None) to ./eopatches_small/eopatch_2_tmp_1570094363.156355\meta_info.pkl
+2019-10-03 12:19:23,187 eolearn.core.eodata DEBUG    Saving (FeatureType.BBOX, None) to ./eopatches_small/eopatch_2_tmp_1570094363.156355\bbox.pkl
+2019-10-03 12:19:23,187 eolearn.core.eodata DEBUG    Saving (FeatureType.TIMESTAMP, None) to ./eopatches_small/eopatch_2_tmp_1570094363.156355\timestamp.pkl
+2019-10-03 12:19:23,203 sentinelhub.download DEBUG    Successful download from https://services.sentinel-hub.com/ogc/wcs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wcs&MAXCC=80.0&ShowLogo=False&Transparent=False&EvalScript=cmV0dXJuIFtCMDEsQjAyLEIwNCxCMDUsQjA4LEI4QSxCMDksQjEwLEIxMSxCMTJd&BBOX=518913.6757253294%2C5727228.931828612%2C521315.3085657184%2C5729802.826976469&FORMAT=image%2Ftiff%3Bdepth%3D32f&CRS=EPSG%3A32635&TIME=2019-04-19T09%3A34%3A38%2F2019-04-19T09%3A34%3A38&RESX=80m&RESY=80m&COVERAGE=BANDS-S2CLOUDLESS&REQUEST=GetCoverage&VERSION=1.1.2
+2019-10-03 12:19:23,203 sentinelhub.download DEBUG    data_type=MimeType.TIFF_d32f
+2019-10-03 12:19:23,203 sentinelhub.download DEBUG    Successful download from https://services.sentinel-hub.com/ogc/wcs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wcs&MAXCC=80.0&ShowLogo=False&Transparent=False&EvalScript=cmV0dXJuIFtCMDEsQjAyLEIwNCxCMDUsQjA4LEI4QSxCMDksQjEwLEIxMSxCMTJd&BBOX=518913.6757253294%2C5724655.036680756%2C521315.3085657184%2C5727228.931828612&FORMAT=image%2Ftiff%3Bdepth%3D32f&CRS=EPSG%3A32635&TIME=2019-04-19T09%3A34%3A38%2F2019-04-19T09%3A34%3A38&RESX=80m&RESY=80m&COVERAGE=BANDS-S2CLOUDLESS&REQUEST=GetCoverage&VERSION=1.1.2
+2019-10-03 12:19:23,203 sentinelhub.download DEBUG    data_type=MimeType.TIFF_d32f
+2019-10-03 12:19:23,234 sentinelhub.download DEBUG    Successful download from https://services.sentinel-hub.com/ogc/wcs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wcs&MAXCC=80.0&ShowLogo=False&Transparent=False&EvalScript=cmV0dXJuIFtCMDEsQjAyLEIwNCxCMDUsQjA4LEI4QSxCMDksQjEwLEIxMSxCMTJd&BBOX=521315.3085657184%2C5724655.036680756%2C523716.9414061075%2C5727228.931828612&FORMAT=image%2Ftiff%3Bdepth%3D32f&CRS=EPSG%3A32635&TIME=2019-04-19T09%3A34%3A38%2F2019-04-19T09%3A34%3A38&RESX=80m&RESY=80m&COVERAGE=BANDS-S2CLOUDLESS&REQUEST=GetCoverage&VERSION=1.1.2
+2019-10-03 12:19:23,234 sentinelhub.download DEBUG    data_type=MimeType.TIFF_d32f
+2019-10-03 12:19:23,234 eolearn.core.eoworkflow DEBUG    Removing intermediate result for SaveToDisk
+2019-10-03 12:19:23,234 eolearn.core.eoworkflow DEBUG    Workflow finished with WorkflowResults(
+  Dependency(SaveToDisk):
+    EOPatch(
+      data: {
+        BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+        CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+        NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+      }
+      mask: {
+        CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+        IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+        IS_VALID: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+      }
+      scalar: {}
+      label: {}
+      vector: {}
+      data_timeless: {}
+      mask_timeless: {
+        VALID_COUNT: numpy.ndarray(shape=(257, 240, 1), dtype=int64)
+      }
+      scalar_timeless: {}
+      label_timeless: {}
+      vector_timeless: {}
+      meta_info: {
+        maxcc: 0.8
+        service_type: 'wcs'
+        size_x: '10m'
+        size_y: '10m'
+        time_difference: datetime.timedelta(days=-1, seconds=86399)
+        time_interval: ['2019-04-18', '2019-04-20']
+      }
+      bbox: BBox(((523716.9414061075, 5727228.931828612), (526118.5742464965, 5729802.826976469)), crs=EPSG:32635)
+      timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+    )
+)
+2019-10-03 12:19:23,234 eolearn.core.eoworkflow DEBUG    Computing S2L1CWCSInput(*(), **{'bbox': BBox(((518913.6757253294, 5722081.1415329), (521315.3085657184, 5724655.036680756)), crs=EPSG:32635), 'time_interval': ['2019-04-18', '2019-04-20']})
+2019-10-03 12:19:23,234 sentinelhub.ogc DEBUG    date_interval=('2019-04-18T00:00:00', '2019-04-20T23:59:59')
+2019-10-03 12:19:23,234 sentinelhub.ogc DEBUG    URL=https://services.sentinel-hub.com/ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=518913.6757253294%2C5722081.1415329%2C521315.3085657184%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0
+2019-10-03 12:19:23,249 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2019-10-03 12:19:23,281 eolearn.core.eoworkflow DEBUG    Removing intermediate result for AddCloudMaskTask
+2019-10-03 12:19:23,281 eolearn.core.eoworkflow DEBUG    Computing NormalBurningRatio(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {}
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((518913.6757253294, 5727228.931828612), (521315.3085657184, 5729802.826976469)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{})
+2019-10-03 12:19:23,281 eolearn.core.eoworkflow DEBUG    Removing intermediate result for NormalBurningRatio
+2019-10-03 12:19:23,281 eolearn.core.eoworkflow DEBUG    Computing AddValidDataMaskTask(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+    NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {}
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((518913.6757253294, 5727228.931828612), (521315.3085657184, 5729802.826976469)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{})
+2019-10-03 12:19:23,281 eolearn.core.eoworkflow DEBUG    Removing intermediate result for AddValidDataMaskTask
+2019-10-03 12:19:23,281 eolearn.core.eoworkflow DEBUG    Computing CountValid(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+    NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_VALID: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {}
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((518913.6757253294, 5727228.931828612), (521315.3085657184, 5729802.826976469)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{})
+2019-10-03 12:19:23,281 eolearn.core.eoworkflow DEBUG    Removing intermediate result for CountValid
+2019-10-03 12:19:23,281 eolearn.core.eoworkflow DEBUG    Computing SaveToDisk(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+    NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_VALID: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {
+    VALID_COUNT: numpy.ndarray(shape=(257, 240, 1), dtype=int64)
+  }
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((518913.6757253294, 5727228.931828612), (521315.3085657184, 5729802.826976469)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{'eopatch_folder': 'eopatch_0'})
+2019-10-03 12:19:23,296 eolearn.core.eodata DEBUG    Saving (FeatureType.DATA, BANDS) to ./eopatches_small/eopatch_0_tmp_1570094363.296756\data\BANDS.npy
+2019-10-03 12:19:23,296 eolearn.core.eodata DEBUG    Saving (FeatureType.DATA, CLP) to ./eopatches_small/eopatch_0_tmp_1570094363.296756\data\CLP.npy
+2019-10-03 12:19:23,296 eolearn.core.eodata DEBUG    Saving (FeatureType.DATA, NBR) to ./eopatches_small/eopatch_0_tmp_1570094363.296756\data\NBR.npy
+2019-10-03 12:19:23,296 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK, IS_DATA) to ./eopatches_small/eopatch_0_tmp_1570094363.296756\mask\IS_DATA.npy
+2019-10-03 12:19:23,296 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK, CLM) to ./eopatches_small/eopatch_0_tmp_1570094363.296756\mask\CLM.npy
+2019-10-03 12:19:23,312 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK, IS_VALID) to ./eopatches_small/eopatch_0_tmp_1570094363.296756\mask\IS_VALID.npy
+2019-10-03 12:19:23,312 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK_TIMELESS, VALID_COUNT) to ./eopatches_small/eopatch_0_tmp_1570094363.296756\mask_timeless\VALID_COUNT.npy
+2019-10-03 12:19:23,327 eolearn.core.eodata DEBUG    Saving (FeatureType.META_INFO, None) to ./eopatches_small/eopatch_0_tmp_1570094363.296756\meta_info.pkl
+2019-10-03 12:19:23,327 eolearn.core.eodata DEBUG    Saving (FeatureType.BBOX, None) to ./eopatches_small/eopatch_0_tmp_1570094363.296756\bbox.pkl
+2019-10-03 12:19:23,327 eolearn.core.eodata DEBUG    Saving (FeatureType.TIMESTAMP, None) to ./eopatches_small/eopatch_0_tmp_1570094363.296756\timestamp.pkl
+2019-10-03 12:19:23,359 eolearn.core.eoworkflow DEBUG    Removing intermediate result for SaveToDisk
+2019-10-03 12:19:23,359 eolearn.core.eoworkflow DEBUG    Workflow finished with WorkflowResults(
+  Dependency(SaveToDisk):
+    EOPatch(
+      data: {
+        BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+        CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+        NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+      }
+      mask: {
+        CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+        IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+        IS_VALID: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+      }
+      scalar: {}
+      label: {}
+      vector: {}
+      data_timeless: {}
+      mask_timeless: {
+        VALID_COUNT: numpy.ndarray(shape=(257, 240, 1), dtype=int64)
+      }
+      scalar_timeless: {}
+      label_timeless: {}
+      vector_timeless: {}
+      meta_info: {
+        maxcc: 0.8
+        service_type: 'wcs'
+        size_x: '10m'
+        size_y: '10m'
+        time_difference: datetime.timedelta(days=-1, seconds=86399)
+        time_interval: ['2019-04-18', '2019-04-20']
+      }
+      bbox: BBox(((518913.6757253294, 5727228.931828612), (521315.3085657184, 5729802.826976469)), crs=EPSG:32635)
+      timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+    )
+)
+2019-10-03 12:19:23,359 eolearn.core.eoworkflow DEBUG    Computing S2L1CWCSInput(*(), **{'bbox': BBox(((521315.3085657184, 5722081.1415329), (523716.9414061075, 5724655.036680756)), crs=EPSG:32635), 'time_interval': ['2019-04-18', '2019-04-20']})
+2019-10-03 12:19:23,374 sentinelhub.ogc DEBUG    date_interval=('2019-04-18T00:00:00', '2019-04-20T23:59:59')
+2019-10-03 12:19:23,374 sentinelhub.ogc DEBUG    URL=https://services.sentinel-hub.com/ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=521315.3085657184%2C5722081.1415329%2C523716.9414061075%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0
+2019-10-03 12:19:23,374 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2019-10-03 12:19:23,374 eolearn.core.eoworkflow DEBUG    Removing intermediate result for AddCloudMaskTask
+2019-10-03 12:19:23,374 eolearn.core.eoworkflow DEBUG    Computing NormalBurningRatio(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {}
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((518913.6757253294, 5724655.036680756), (521315.3085657184, 5727228.931828612)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{})
+2019-10-03 12:19:23,374 eolearn.core.eoworkflow DEBUG    Removing intermediate result for NormalBurningRatio
+2019-10-03 12:19:23,374 eolearn.core.eoworkflow DEBUG    Computing AddValidDataMaskTask(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+    NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {}
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((518913.6757253294, 5724655.036680756), (521315.3085657184, 5727228.931828612)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{})
+2019-10-03 12:19:23,390 eolearn.core.eoworkflow DEBUG    Removing intermediate result for AddValidDataMaskTask
+2019-10-03 12:19:23,390 eolearn.core.eoworkflow DEBUG    Computing CountValid(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+    NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_VALID: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {}
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((518913.6757253294, 5724655.036680756), (521315.3085657184, 5727228.931828612)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{})
+2019-10-03 12:19:23,390 eolearn.core.eoworkflow DEBUG    Removing intermediate result for CountValid
+2019-10-03 12:19:23,390 eolearn.core.eoworkflow DEBUG    Computing SaveToDisk(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+    NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_VALID: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {
+    VALID_COUNT: numpy.ndarray(shape=(257, 240, 1), dtype=int64)
+  }
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((518913.6757253294, 5724655.036680756), (521315.3085657184, 5727228.931828612)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{'eopatch_folder': 'eopatch_3'})
+2019-10-03 12:19:23,390 eolearn.core.eodata DEBUG    Saving (FeatureType.DATA, BANDS) to ./eopatches_small/eopatch_3_tmp_1570094363.390356\data\BANDS.npy
+2019-10-03 12:19:23,390 eolearn.core.eodata DEBUG    Saving (FeatureType.DATA, CLP) to ./eopatches_small/eopatch_3_tmp_1570094363.390356\data\CLP.npy
+2019-10-03 12:19:23,390 eolearn.core.eodata DEBUG    Saving (FeatureType.DATA, NBR) to ./eopatches_small/eopatch_3_tmp_1570094363.390356\data\NBR.npy
+2019-10-03 12:19:23,390 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK, IS_DATA) to ./eopatches_small/eopatch_3_tmp_1570094363.390356\mask\IS_DATA.npy
+2019-10-03 12:19:23,406 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK, CLM) to ./eopatches_small/eopatch_3_tmp_1570094363.390356\mask\CLM.npy
+2019-10-03 12:19:23,408 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK, IS_VALID) to ./eopatches_small/eopatch_3_tmp_1570094363.390356\mask\IS_VALID.npy
+2019-10-03 12:19:23,410 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK_TIMELESS, VALID_COUNT) to ./eopatches_small/eopatch_3_tmp_1570094363.390356\mask_timeless\VALID_COUNT.npy
+2019-10-03 12:19:23,450 eolearn.core.eodata DEBUG    Saving (FeatureType.META_INFO, None) to ./eopatches_small/eopatch_3_tmp_1570094363.390356\meta_info.pkl
+2019-10-03 12:19:23,451 eolearn.core.eoworkflow DEBUG    Removing intermediate result for AddCloudMaskTask
+2019-10-03 12:19:23,453 eolearn.core.eoworkflow DEBUG    Computing NormalBurningRatio(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {}
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((521315.3085657184, 5724655.036680756), (523716.9414061075, 5727228.931828612)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{})
+2019-10-03 12:19:23,454 eolearn.core.eodata DEBUG    Saving (FeatureType.BBOX, None) to ./eopatches_small/eopatch_3_tmp_1570094363.390356\bbox.pkl
+2019-10-03 12:19:23,454 eolearn.core.eoworkflow DEBUG    Removing intermediate result for NormalBurningRatio
+2019-10-03 12:19:23,456 eolearn.core.eoworkflow DEBUG    Computing AddValidDataMaskTask(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+    NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {}
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((521315.3085657184, 5724655.036680756), (523716.9414061075, 5727228.931828612)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{})
+2019-10-03 12:19:23,457 eolearn.core.eodata DEBUG    Saving (FeatureType.TIMESTAMP, None) to ./eopatches_small/eopatch_3_tmp_1570094363.390356\timestamp.pkl
+2019-10-03 12:19:23,457 eolearn.core.eoworkflow DEBUG    Removing intermediate result for AddValidDataMaskTask
+2019-10-03 12:19:23,459 eolearn.core.eoworkflow DEBUG    Computing CountValid(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+    NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_VALID: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {}
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((521315.3085657184, 5724655.036680756), (523716.9414061075, 5727228.931828612)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{})
+2019-10-03 12:19:23,461 eolearn.core.eoworkflow DEBUG    Removing intermediate result for CountValid
+2019-10-03 12:19:23,462 eolearn.core.eoworkflow DEBUG    Computing SaveToDisk(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+    NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_VALID: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {
+    VALID_COUNT: numpy.ndarray(shape=(257, 240, 1), dtype=int64)
+  }
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((521315.3085657184, 5724655.036680756), (523716.9414061075, 5727228.931828612)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{'eopatch_folder': 'eopatch_4'})
+2019-10-03 12:19:23,486 eolearn.core.eoworkflow DEBUG    Removing intermediate result for SaveToDisk
+2019-10-03 12:19:23,486 eolearn.core.eoworkflow DEBUG    Workflow finished with WorkflowResults(
+  Dependency(SaveToDisk):
+    EOPatch(
+      data: {
+        BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+        CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+        NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+      }
+      mask: {
+        CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+        IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+        IS_VALID: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+      }
+      scalar: {}
+      label: {}
+      vector: {}
+      data_timeless: {}
+      mask_timeless: {
+        VALID_COUNT: numpy.ndarray(shape=(257, 240, 1), dtype=int64)
+      }
+      scalar_timeless: {}
+      label_timeless: {}
+      vector_timeless: {}
+      meta_info: {
+        maxcc: 0.8
+        service_type: 'wcs'
+        size_x: '10m'
+        size_y: '10m'
+        time_difference: datetime.timedelta(days=-1, seconds=86399)
+        time_interval: ['2019-04-18', '2019-04-20']
+      }
+      bbox: BBox(((518913.6757253294, 5724655.036680756), (521315.3085657184, 5727228.931828612)), crs=EPSG:32635)
+      timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+    )
+)
+2019-10-03 12:19:23,486 eolearn.core.eodata DEBUG    Saving (FeatureType.DATA, BANDS) to ./eopatches_small/eopatch_4_tmp_1570094363.48656\data\BANDS.npy
+2019-10-03 12:19:23,486 eolearn.core.eoworkflow DEBUG    Computing S2L1CWCSInput(*(), **{'bbox': BBox(((523716.9414061075, 5722081.1415329), (526118.5742464965, 5724655.036680756)), crs=EPSG:32635), 'time_interval': ['2019-04-18', '2019-04-20']})
+2019-10-03 12:19:23,502 sentinelhub.ogc DEBUG    date_interval=('2019-04-18T00:00:00', '2019-04-20T23:59:59')
+2019-10-03 12:19:23,502 sentinelhub.ogc DEBUG    URL=https://services.sentinel-hub.com/ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=523716.9414061075%2C5722081.1415329%2C526118.5742464965%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0
+2019-10-03 12:19:23,502 eolearn.core.eodata DEBUG    Saving (FeatureType.DATA, CLP) to ./eopatches_small/eopatch_4_tmp_1570094363.48656\data\CLP.npy
+2019-10-03 12:19:23,517 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2019-10-03 12:19:23,517 eolearn.core.eodata DEBUG    Saving (FeatureType.DATA, NBR) to ./eopatches_small/eopatch_4_tmp_1570094363.48656\data\NBR.npy
+2019-10-03 12:19:23,533 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK, IS_DATA) to ./eopatches_small/eopatch_4_tmp_1570094363.48656\mask\IS_DATA.npy
+2019-10-03 12:19:23,533 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK, CLM) to ./eopatches_small/eopatch_4_tmp_1570094363.48656\mask\CLM.npy
+2019-10-03 12:19:23,533 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK, IS_VALID) to ./eopatches_small/eopatch_4_tmp_1570094363.48656\mask\IS_VALID.npy
+2019-10-03 12:19:23,533 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK_TIMELESS, VALID_COUNT) to ./eopatches_small/eopatch_4_tmp_1570094363.48656\mask_timeless\VALID_COUNT.npy
+2019-10-03 12:19:23,533 eolearn.core.eodata DEBUG    Saving (FeatureType.META_INFO, None) to ./eopatches_small/eopatch_4_tmp_1570094363.48656\meta_info.pkl
+2019-10-03 12:19:23,548 eolearn.core.eodata DEBUG    Saving (FeatureType.BBOX, None) to ./eopatches_small/eopatch_4_tmp_1570094363.48656\bbox.pkl
+2019-10-03 12:19:23,550 eolearn.core.eodata DEBUG    Saving (FeatureType.TIMESTAMP, None) to ./eopatches_small/eopatch_4_tmp_1570094363.48656\timestamp.pkl
+2019-10-03 12:19:23,571 eolearn.core.eoworkflow DEBUG    Removing intermediate result for SaveToDisk
+2019-10-03 12:19:23,572 eolearn.core.eoworkflow DEBUG    Workflow finished with WorkflowResults(
+  Dependency(SaveToDisk):
+    EOPatch(
+      data: {
+        BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+        CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+        NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+      }
+      mask: {
+        CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+        IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+        IS_VALID: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+      }
+      scalar: {}
+      label: {}
+      vector: {}
+      data_timeless: {}
+      mask_timeless: {
+        VALID_COUNT: numpy.ndarray(shape=(257, 240, 1), dtype=int64)
+      }
+      scalar_timeless: {}
+      label_timeless: {}
+      vector_timeless: {}
+      meta_info: {
+        maxcc: 0.8
+        service_type: 'wcs'
+        size_x: '10m'
+        size_y: '10m'
+        time_difference: datetime.timedelta(days=-1, seconds=86399)
+        time_interval: ['2019-04-18', '2019-04-20']
+      }
+      bbox: BBox(((521315.3085657184, 5724655.036680756), (523716.9414061075, 5727228.931828612)), crs=EPSG:32635)
+      timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+    )
+)
+2019-10-03 12:19:23,603 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "GET /ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=523716.9414061075%2C5724655.036680756%2C526118.5742464965%2C5727228.931828612&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0 HTTP/1.1" 200 972
+2019-10-03 12:19:23,619 sentinelhub.download DEBUG    Successful download from https://services.sentinel-hub.com/ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=523716.9414061075%2C5724655.036680756%2C526118.5742464965%2C5727228.931828612&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0
+2019-10-03 12:19:23,619 sentinelhub.download DEBUG    data_type=MimeType.JSON
+2019-10-03 12:19:23,619 sentinelhub.ogc DEBUG    dates=[datetime.datetime(2019, 4, 19, 9, 34, 38)]
+2019-10-03 12:19:23,619 sentinelhub.ogc DEBUG    filename=wcs_BANDS-S2-L1C_EPSG32635_523716.9414061075_5724655.036680756_526118.5742464965_5727228.931828612_2019-04-19T09-34-38_10mX10m_EvalScript_return[B04,B08,B08A,B09,B11,B12]_ShowLogo_False_Transparent_True_tiff_depth=32f.tiff
+2019-10-03 12:19:23,619 sentinelhub.ogc DEBUG    date_interval=('2019-04-18T00:00:00', '2019-04-20T23:59:59')
+2019-10-03 12:19:23,619 sentinelhub.ogc DEBUG    dates=[datetime.datetime(2019, 4, 19, 9, 34, 38)]
+2019-10-03 12:19:23,619 sentinelhub.download DEBUG    Using max_threads=None for 1 requests
+2019-10-03 12:19:23,619 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2019-10-03 12:19:23,728 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "GET /ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=518913.6757253294%2C5722081.1415329%2C521315.3085657184%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0 HTTP/1.1" 200 972
+2019-10-03 12:19:23,728 sentinelhub.download DEBUG    Successful download from https://services.sentinel-hub.com/ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=518913.6757253294%2C5722081.1415329%2C521315.3085657184%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0
+2019-10-03 12:19:23,728 sentinelhub.download DEBUG    data_type=MimeType.JSON
+2019-10-03 12:19:23,728 sentinelhub.ogc DEBUG    dates=[datetime.datetime(2019, 4, 19, 9, 34, 38)]
+2019-10-03 12:19:23,728 sentinelhub.ogc DEBUG    filename=wcs_BANDS-S2-L1C_EPSG32635_518913.6757253294_5722081.1415329_521315.3085657184_5724655.036680756_2019-04-19T09-34-38_10mX10m_EvalScript_return[B04,B08,B08A,B09,B11,B12]_ShowLogo_False_Transparent_True_tiff_depth=32f.tiff
+2019-10-03 12:19:23,728 sentinelhub.ogc DEBUG    date_interval=('2019-04-18T00:00:00', '2019-04-20T23:59:59')
+2019-10-03 12:19:23,728 sentinelhub.ogc DEBUG    dates=[datetime.datetime(2019, 4, 19, 9, 34, 38)]
+2019-10-03 12:19:23,728 sentinelhub.download DEBUG    Using max_threads=None for 1 requests
+2019-10-03 12:19:23,744 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2019-10-03 12:19:23,837 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "GET /ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=521315.3085657184%2C5722081.1415329%2C523716.9414061075%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0 HTTP/1.1" 200 972
+2019-10-03 12:19:23,837 sentinelhub.download DEBUG    Successful download from https://services.sentinel-hub.com/ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=521315.3085657184%2C5722081.1415329%2C523716.9414061075%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0
+2019-10-03 12:19:23,837 sentinelhub.download DEBUG    data_type=MimeType.JSON
+2019-10-03 12:19:23,853 sentinelhub.ogc DEBUG    dates=[datetime.datetime(2019, 4, 19, 9, 34, 38)]
+2019-10-03 12:19:23,853 sentinelhub.ogc DEBUG    filename=wcs_BANDS-S2-L1C_EPSG32635_521315.3085657184_5722081.1415329_523716.9414061075_5724655.036680756_2019-04-19T09-34-38_10mX10m_EvalScript_return[B04,B08,B08A,B09,B11,B12]_ShowLogo_False_Transparent_True_tiff_depth=32f.tiff
+2019-10-03 12:19:23,853 sentinelhub.ogc DEBUG    date_interval=('2019-04-18T00:00:00', '2019-04-20T23:59:59')
+2019-10-03 12:19:23,853 sentinelhub.ogc DEBUG    dates=[datetime.datetime(2019, 4, 19, 9, 34, 38)]
+2019-10-03 12:19:23,853 sentinelhub.download DEBUG    Using max_threads=None for 1 requests
+2019-10-03 12:19:23,853 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2019-10-03 12:19:23,962 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "GET /ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=523716.9414061075%2C5722081.1415329%2C526118.5742464965%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0 HTTP/1.1" 200 972
+2019-10-03 12:19:23,962 sentinelhub.download DEBUG    Successful download from https://services.sentinel-hub.com/ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=523716.9414061075%2C5722081.1415329%2C526118.5742464965%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0
+2019-10-03 12:19:23,962 sentinelhub.download DEBUG    data_type=MimeType.JSON
+2019-10-03 12:19:23,962 sentinelhub.ogc DEBUG    dates=[datetime.datetime(2019, 4, 19, 9, 34, 38)]
+2019-10-03 12:19:23,962 sentinelhub.ogc DEBUG    filename=wcs_BANDS-S2-L1C_EPSG32635_523716.9414061075_5722081.1415329_526118.5742464965_5724655.036680756_2019-04-19T09-34-38_10mX10m_EvalScript_return[B04,B08,B08A,B09,B11,B12]_ShowLogo_False_Transparent_True_tiff_depth=32f.tiff
+2019-10-03 12:19:23,962 sentinelhub.ogc DEBUG    date_interval=('2019-04-18T00:00:00', '2019-04-20T23:59:59')
+2019-10-03 12:19:23,962 sentinelhub.ogc DEBUG    dates=[datetime.datetime(2019, 4, 19, 9, 34, 38)]
+2019-10-03 12:19:23,978 sentinelhub.download DEBUG    Using max_threads=None for 1 requests
+2019-10-03 12:19:23,978 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2019-10-03 12:19:24,539 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "GET /ogc/wcs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wcs&MAXCC=80.0&ShowLogo=False&Transparent=True&EvalScript=cmV0dXJuIFtCMDQsIEIwOCwgQjA4QSwgQjA5LCBCMTEsIEIxMl07&BBOX=518913.6757253294%2C5722081.1415329%2C521315.3085657184%2C5724655.036680756&FORMAT=image%2Ftiff%3Bdepth%3D32f&CRS=EPSG%3A32635&TIME=2019-04-19T09%3A34%3A38%2F2019-04-19T09%3A34%3A38&RESX=10m&RESY=10m&COVERAGE=BANDS-S2-L1C&REQUEST=GetCoverage&VERSION=1.1.2 HTTP/1.1" 200 None
+2019-10-03 12:19:24,555 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "GET /ogc/wcs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wcs&MAXCC=80.0&ShowLogo=False&Transparent=True&EvalScript=cmV0dXJuIFtCMDQsIEIwOCwgQjA4QSwgQjA5LCBCMTEsIEIxMl07&BBOX=523716.9414061075%2C5724655.036680756%2C526118.5742464965%2C5727228.931828612&FORMAT=image%2Ftiff%3Bdepth%3D32f&CRS=EPSG%3A32635&TIME=2019-04-19T09%3A34%3A38%2F2019-04-19T09%3A34%3A38&RESX=10m&RESY=10m&COVERAGE=BANDS-S2-L1C&REQUEST=GetCoverage&VERSION=1.1.2 HTTP/1.1" 200 None
+2019-10-03 12:19:24,649 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "GET /ogc/wcs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wcs&MAXCC=80.0&ShowLogo=False&Transparent=True&EvalScript=cmV0dXJuIFtCMDQsIEIwOCwgQjA4QSwgQjA5LCBCMTEsIEIxMl07&BBOX=521315.3085657184%2C5722081.1415329%2C523716.9414061075%2C5724655.036680756&FORMAT=image%2Ftiff%3Bdepth%3D32f&CRS=EPSG%3A32635&TIME=2019-04-19T09%3A34%3A38%2F2019-04-19T09%3A34%3A38&RESX=10m&RESY=10m&COVERAGE=BANDS-S2-L1C&REQUEST=GetCoverage&VERSION=1.1.2 HTTP/1.1" 200 None
+2019-10-03 12:19:24,820 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "GET /ogc/wcs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wcs&MAXCC=80.0&ShowLogo=False&Transparent=True&EvalScript=cmV0dXJuIFtCMDQsIEIwOCwgQjA4QSwgQjA5LCBCMTEsIEIxMl07&BBOX=523716.9414061075%2C5722081.1415329%2C526118.5742464965%2C5724655.036680756&FORMAT=image%2Ftiff%3Bdepth%3D32f&CRS=EPSG%3A32635&TIME=2019-04-19T09%3A34%3A38%2F2019-04-19T09%3A34%3A38&RESX=10m&RESY=10m&COVERAGE=BANDS-S2-L1C&REQUEST=GetCoverage&VERSION=1.1.2 HTTP/1.1" 200 None
+2019-10-03 12:19:25,881 sentinelhub.download DEBUG    Successful download from https://services.sentinel-hub.com/ogc/wcs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wcs&MAXCC=80.0&ShowLogo=False&Transparent=True&EvalScript=cmV0dXJuIFtCMDQsIEIwOCwgQjA4QSwgQjA5LCBCMTEsIEIxMl07&BBOX=523716.9414061075%2C5724655.036680756%2C526118.5742464965%2C5727228.931828612&FORMAT=image%2Ftiff%3Bdepth%3D32f&CRS=EPSG%3A32635&TIME=2019-04-19T09%3A34%3A38%2F2019-04-19T09%3A34%3A38&RESX=10m&RESY=10m&COVERAGE=BANDS-S2-L1C&REQUEST=GetCoverage&VERSION=1.1.2
+2019-10-03 12:19:25,881 sentinelhub.download DEBUG    data_type=MimeType.TIFF_d32f
+2019-10-03 12:19:25,897 eolearn.core.eoworkflow DEBUG    Computing AddCloudMaskTask(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+  }
+  mask: {
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {}
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((523716.9414061075, 5724655.036680756), (526118.5742464965, 5727228.931828612)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{})
+2019-10-03 12:19:25,897 sentinelhub.ogc DEBUG    date_interval=('2019-04-18T00:00:00', '2019-04-20T23:59:59')
+2019-10-03 12:19:25,897 sentinelhub.ogc DEBUG    URL=https://services.sentinel-hub.com/ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=523716.9414061075%2C5724655.036680756%2C526118.5742464965%2C5727228.931828612&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0
+2019-10-03 12:19:25,897 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2019-10-03 12:19:26,177 sentinelhub.download DEBUG    Successful download from https://services.sentinel-hub.com/ogc/wcs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wcs&MAXCC=80.0&ShowLogo=False&Transparent=True&EvalScript=cmV0dXJuIFtCMDQsIEIwOCwgQjA4QSwgQjA5LCBCMTEsIEIxMl07&BBOX=518913.6757253294%2C5722081.1415329%2C521315.3085657184%2C5724655.036680756&FORMAT=image%2Ftiff%3Bdepth%3D32f&CRS=EPSG%3A32635&TIME=2019-04-19T09%3A34%3A38%2F2019-04-19T09%3A34%3A38&RESX=10m&RESY=10m&COVERAGE=BANDS-S2-L1C&REQUEST=GetCoverage&VERSION=1.1.2
+2019-10-03 12:19:26,177 sentinelhub.download DEBUG    data_type=MimeType.TIFF_d32f
+2019-10-03 12:19:26,193 eolearn.core.eoworkflow DEBUG    Computing AddCloudMaskTask(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+  }
+  mask: {
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {}
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((518913.6757253294, 5722081.1415329), (521315.3085657184, 5724655.036680756)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{})
+2019-10-03 12:19:26,193 sentinelhub.ogc DEBUG    date_interval=('2019-04-18T00:00:00', '2019-04-20T23:59:59')
+2019-10-03 12:19:26,193 sentinelhub.ogc DEBUG    URL=https://services.sentinel-hub.com/ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=518913.6757253294%2C5722081.1415329%2C521315.3085657184%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0
+2019-10-03 12:19:26,209 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2019-10-03 12:19:26,380 sentinelhub.download DEBUG    Successful download from https://services.sentinel-hub.com/ogc/wcs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wcs&MAXCC=80.0&ShowLogo=False&Transparent=True&EvalScript=cmV0dXJuIFtCMDQsIEIwOCwgQjA4QSwgQjA5LCBCMTEsIEIxMl07&BBOX=521315.3085657184%2C5722081.1415329%2C523716.9414061075%2C5724655.036680756&FORMAT=image%2Ftiff%3Bdepth%3D32f&CRS=EPSG%3A32635&TIME=2019-04-19T09%3A34%3A38%2F2019-04-19T09%3A34%3A38&RESX=10m&RESY=10m&COVERAGE=BANDS-S2-L1C&REQUEST=GetCoverage&VERSION=1.1.2
+2019-10-03 12:19:26,380 sentinelhub.download DEBUG    data_type=MimeType.TIFF_d32f
+2019-10-03 12:19:26,396 eolearn.core.eoworkflow DEBUG    Computing AddCloudMaskTask(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+  }
+  mask: {
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {}
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((521315.3085657184, 5722081.1415329), (523716.9414061075, 5724655.036680756)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{})
+2019-10-03 12:19:26,396 sentinelhub.ogc DEBUG    date_interval=('2019-04-18T00:00:00', '2019-04-20T23:59:59')
+2019-10-03 12:19:26,396 sentinelhub.ogc DEBUG    URL=https://services.sentinel-hub.com/ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=521315.3085657184%2C5722081.1415329%2C523716.9414061075%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0
+2019-10-03 12:19:26,396 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2019-10-03 12:19:26,505 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "GET /ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=523716.9414061075%2C5724655.036680756%2C526118.5742464965%2C5727228.931828612&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0 HTTP/1.1" 200 972
+2019-10-03 12:19:26,505 sentinelhub.download DEBUG    Successful download from https://services.sentinel-hub.com/ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=523716.9414061075%2C5724655.036680756%2C526118.5742464965%2C5727228.931828612&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0
+2019-10-03 12:19:26,505 sentinelhub.download DEBUG    data_type=MimeType.JSON
+2019-10-03 12:19:26,505 sentinelhub.ogc DEBUG    dates=[datetime.datetime(2019, 4, 19, 9, 34, 38)]
+2019-10-03 12:19:26,505 sentinelhub.ogc DEBUG    filename=wcs_BANDS-S2CLOUDLESS_EPSG32635_523716.9414061075_5724655.036680756_526118.5742464965_5727228.931828612_2019-04-19T09-34-38_80mX80m_EvalScript_return[B01,B02,B04,B05,B08,B8A,B09,B10,B11,B12]_ShowLogo_False_Transparent_False_tiff_depth=32f.tiff
+2019-10-03 12:19:26,505 sentinelhub.ogc DEBUG    date_interval=('2019-04-18T00:00:00', '2019-04-20T23:59:59')
+2019-10-03 12:19:26,505 sentinelhub.ogc DEBUG    dates=[datetime.datetime(2019, 4, 19, 9, 34, 38)]
+2019-10-03 12:19:26,505 sentinelhub.download DEBUG    Using max_threads=None for 1 requests
+2019-10-03 12:19:26,521 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2019-10-03 12:19:26,645 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "GET /ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=518913.6757253294%2C5722081.1415329%2C521315.3085657184%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0 HTTP/1.1" 200 972
+2019-10-03 12:19:26,645 sentinelhub.download DEBUG    Successful download from https://services.sentinel-hub.com/ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=518913.6757253294%2C5722081.1415329%2C521315.3085657184%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0
+2019-10-03 12:19:26,645 sentinelhub.download DEBUG    data_type=MimeType.JSON
+2019-10-03 12:19:26,645 sentinelhub.ogc DEBUG    dates=[datetime.datetime(2019, 4, 19, 9, 34, 38)]
+2019-10-03 12:19:26,645 sentinelhub.ogc DEBUG    filename=wcs_BANDS-S2CLOUDLESS_EPSG32635_518913.6757253294_5722081.1415329_521315.3085657184_5724655.036680756_2019-04-19T09-34-38_80mX80m_EvalScript_return[B01,B02,B04,B05,B08,B8A,B09,B10,B11,B12]_ShowLogo_False_Transparent_False_tiff_depth=32f.tiff
+2019-10-03 12:19:26,645 sentinelhub.ogc DEBUG    date_interval=('2019-04-18T00:00:00', '2019-04-20T23:59:59')
+2019-10-03 12:19:26,645 sentinelhub.download DEBUG    Successful download from https://services.sentinel-hub.com/ogc/wcs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wcs&MAXCC=80.0&ShowLogo=False&Transparent=True&EvalScript=cmV0dXJuIFtCMDQsIEIwOCwgQjA4QSwgQjA5LCBCMTEsIEIxMl07&BBOX=523716.9414061075%2C5722081.1415329%2C526118.5742464965%2C5724655.036680756&FORMAT=image%2Ftiff%3Bdepth%3D32f&CRS=EPSG%3A32635&TIME=2019-04-19T09%3A34%3A38%2F2019-04-19T09%3A34%3A38&RESX=10m&RESY=10m&COVERAGE=BANDS-S2-L1C&REQUEST=GetCoverage&VERSION=1.1.2
+2019-10-03 12:19:26,645 sentinelhub.ogc DEBUG    dates=[datetime.datetime(2019, 4, 19, 9, 34, 38)]
+2019-10-03 12:19:26,645 sentinelhub.download DEBUG    data_type=MimeType.TIFF_d32f
+2019-10-03 12:19:26,645 sentinelhub.download DEBUG    Using max_threads=None for 1 requests
+2019-10-03 12:19:26,661 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2019-10-03 12:19:26,677 eolearn.core.eoworkflow DEBUG    Computing AddCloudMaskTask(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+  }
+  mask: {
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {}
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((523716.9414061075, 5722081.1415329), (526118.5742464965, 5724655.036680756)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{})
+2019-10-03 12:19:26,677 sentinelhub.ogc DEBUG    date_interval=('2019-04-18T00:00:00', '2019-04-20T23:59:59')
+2019-10-03 12:19:26,677 sentinelhub.ogc DEBUG    URL=https://services.sentinel-hub.com/ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=523716.9414061075%2C5722081.1415329%2C526118.5742464965%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0
+2019-10-03 12:19:26,677 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2019-10-03 12:19:26,817 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "GET /ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=521315.3085657184%2C5722081.1415329%2C523716.9414061075%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0 HTTP/1.1" 200 972
+2019-10-03 12:19:26,817 sentinelhub.download DEBUG    Successful download from https://services.sentinel-hub.com/ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=521315.3085657184%2C5722081.1415329%2C523716.9414061075%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0
+2019-10-03 12:19:26,817 sentinelhub.download DEBUG    data_type=MimeType.JSON
+2019-10-03 12:19:26,817 sentinelhub.ogc DEBUG    dates=[datetime.datetime(2019, 4, 19, 9, 34, 38)]
+2019-10-03 12:19:26,817 sentinelhub.ogc DEBUG    filename=wcs_BANDS-S2CLOUDLESS_EPSG32635_521315.3085657184_5722081.1415329_523716.9414061075_5724655.036680756_2019-04-19T09-34-38_80mX80m_EvalScript_return[B01,B02,B04,B05,B08,B8A,B09,B10,B11,B12]_ShowLogo_False_Transparent_False_tiff_depth=32f.tiff
+2019-10-03 12:19:26,817 sentinelhub.ogc DEBUG    date_interval=('2019-04-18T00:00:00', '2019-04-20T23:59:59')
+2019-10-03 12:19:26,817 sentinelhub.ogc DEBUG    dates=[datetime.datetime(2019, 4, 19, 9, 34, 38)]
+2019-10-03 12:19:26,817 sentinelhub.download DEBUG    Using max_threads=None for 1 requests
+2019-10-03 12:19:26,817 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2019-10-03 12:19:27,082 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "GET /ogc/wcs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wcs&MAXCC=80.0&ShowLogo=False&Transparent=False&EvalScript=cmV0dXJuIFtCMDEsQjAyLEIwNCxCMDUsQjA4LEI4QSxCMDksQjEwLEIxMSxCMTJd&BBOX=523716.9414061075%2C5724655.036680756%2C526118.5742464965%2C5727228.931828612&FORMAT=image%2Ftiff%3Bdepth%3D32f&CRS=EPSG%3A32635&TIME=2019-04-19T09%3A34%3A38%2F2019-04-19T09%3A34%3A38&RESX=80m&RESY=80m&COVERAGE=BANDS-S2CLOUDLESS&REQUEST=GetCoverage&VERSION=1.1.2 HTTP/1.1" 200 None
+2019-10-03 12:19:27,113 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "GET /ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=523716.9414061075%2C5722081.1415329%2C526118.5742464965%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0 HTTP/1.1" 200 972
+2019-10-03 12:19:27,113 sentinelhub.download DEBUG    Successful download from https://services.sentinel-hub.com/ogc/wfs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wfs&REQUEST=GetFeature&TYPENAMES=S2.TILE&BBOX=523716.9414061075%2C5722081.1415329%2C526118.5742464965%2C5724655.036680756&OUTPUTFORMAT=application%2Fjson&SRSNAME=EPSG%3A32635&TIME=2019-04-18T00%3A00%3A00%2F2019-04-20T23%3A59%3A59&MAXCC=80.0&MAXFEATURES=100&FEATURE_OFFSET=0
+2019-10-03 12:19:27,113 sentinelhub.download DEBUG    data_type=MimeType.JSON
+2019-10-03 12:19:27,113 sentinelhub.ogc DEBUG    dates=[datetime.datetime(2019, 4, 19, 9, 34, 38)]
+2019-10-03 12:19:27,113 sentinelhub.ogc DEBUG    filename=wcs_BANDS-S2CLOUDLESS_EPSG32635_523716.9414061075_5722081.1415329_526118.5742464965_5724655.036680756_2019-04-19T09-34-38_80mX80m_EvalScript_return[B01,B02,B04,B05,B08,B8A,B09,B10,B11,B12]_ShowLogo_False_Transparent_False_tiff_depth=32f.tiff
+2019-10-03 12:19:27,113 sentinelhub.ogc DEBUG    date_interval=('2019-04-18T00:00:00', '2019-04-20T23:59:59')
+2019-10-03 12:19:27,113 sentinelhub.ogc DEBUG    dates=[datetime.datetime(2019, 4, 19, 9, 34, 38)]
+2019-10-03 12:19:27,113 sentinelhub.download DEBUG    Using max_threads=None for 1 requests
+2019-10-03 12:19:27,129 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): services.sentinel-hub.com:443
+2019-10-03 12:19:27,191 sentinelhub.download DEBUG    Successful download from https://services.sentinel-hub.com/ogc/wcs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wcs&MAXCC=80.0&ShowLogo=False&Transparent=False&EvalScript=cmV0dXJuIFtCMDEsQjAyLEIwNCxCMDUsQjA4LEI4QSxCMDksQjEwLEIxMSxCMTJd&BBOX=523716.9414061075%2C5724655.036680756%2C526118.5742464965%2C5727228.931828612&FORMAT=image%2Ftiff%3Bdepth%3D32f&CRS=EPSG%3A32635&TIME=2019-04-19T09%3A34%3A38%2F2019-04-19T09%3A34%3A38&RESX=80m&RESY=80m&COVERAGE=BANDS-S2CLOUDLESS&REQUEST=GetCoverage&VERSION=1.1.2
+2019-10-03 12:19:27,191 sentinelhub.download DEBUG    data_type=MimeType.TIFF_d32f
+2019-10-03 12:19:27,269 urllib3.connectionpool DEBUG    https://services.sentinel-hub.com:443 "GET /ogc/wcs/b5be8d62-3224-4c9a-be03-c06aef8d2b79?SERVICE=wcs&MAXCC=80.0&ShowLogo=False&Transparent=False&EvalScript=cmV0dXJuIFtCMDEsQjAyLEIwNCxCMDUsQjA4LEI4QSxCMDksQjEwLEIxMSxCMTJd&BBOX=518913.6757253294%2C5722081.1415329%2C521315.3085657184%2C5724655.036680756&FORMAT=image%2Ftiff%3Bdepth%3D32f&CRS=EPSG%3A32635&TIME=2019-04-19T09%3A34%3A38%2F2019-04-19T09%3A34%3A38&RESX=80m&RESY=80m&COVERAGE=BANDS-S2CLOUDLESS&REQUEST=GetCoverage&VERSION=1.1.2 HTTP/1.1" 200 None
+2019-10-03 12:19:27,269 eolearn.core.eoworkflow DEBUG    Removing intermediate result for AddCloudMaskTask
+2019-10-03 12:19:27,269 eolearn.core.eoworkflow DEBUG    Computing NormalBurningRatio(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {}
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((523716.9414061075, 5724655.036680756), (526118.5742464965, 5727228.931828612)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{})
+2019-10-03 12:19:27,269 eolearn.core.eoworkflow DEBUG    Removing intermediate result for NormalBurningRatio
+2019-10-03 12:19:27,269 eolearn.core.eoworkflow DEBUG    Computing AddValidDataMaskTask(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+    NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {}
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((523716.9414061075, 5724655.036680756), (526118.5742464965, 5727228.931828612)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{})
+2019-10-03 12:19:27,269 eolearn.core.eoworkflow DEBUG    Removing intermediate result for AddValidDataMaskTask
+2019-10-03 12:19:27,269 eolearn.core.eoworkflow DEBUG    Computing CountValid(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+    NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_VALID: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {}
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((523716.9414061075, 5724655.036680756), (526118.5742464965, 5727228.931828612)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{})
+2019-10-03 12:19:27,269 eolearn.core.eoworkflow DEBUG    Removing intermediate result for CountValid
+2019-10-03 12:19:27,269 eolearn.core.eoworkflow DEBUG    Computing SaveToDisk(*(EOPatch(
+  data: {
+    BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+    CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+    NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+  }
+  mask: {
+    CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+    IS_VALID: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+  }
+  scalar: {}
+  label: {}
+  vector: {}
+  data_timeless: {}
+  mask_timeless: {
+    VALID_COUNT: numpy.ndarray(shape=(257, 240, 1), dtype=int64)
+  }
+  scalar_timeless: {}
+  label_timeless: {}
+  vector_timeless: {}
+  meta_info: {
+    maxcc: 0.8
+    service_type: 'wcs'
+    size_x: '10m'
+    size_y: '10m'
+    time_difference: datetime.timedelta(days=-1, seconds=86399)
+    time_interval: ['2019-04-18', '2019-04-20']
+  }
+  bbox: BBox(((523716.9414061075, 5724655.036680756), (526118.5742464965, 5727228.931828612)), crs=EPSG:32635)
+  timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+),), **{'eopatch_folder': 'eopatch_5'})
+2019-10-03 12:19:27,269 eolearn.core.eodata DEBUG    Saving (FeatureType.DATA, BANDS) to ./eopatches_small/eopatch_5_tmp_1570094367.269969\data\BANDS.npy
+2019-10-03 12:19:27,285 eolearn.core.eodata DEBUG    Saving (FeatureType.DATA, CLP) to ./eopatches_small/eopatch_5_tmp_1570094367.269969\data\CLP.npy
+2019-10-03 12:19:27,285 eolearn.core.eodata DEBUG    Saving (FeatureType.DATA, NBR) to ./eopatches_small/eopatch_5_tmp_1570094367.269969\data\NBR.npy
+2019-10-03 12:19:27,285 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK, IS_DATA) to ./eopatches_small/eopatch_5_tmp_1570094367.269969\mask\IS_DATA.npy
+2019-10-03 12:19:27,285 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK, CLM) to ./eopatches_small/eopatch_5_tmp_1570094367.269969\mask\CLM.npy
+2019-10-03 12:19:27,285 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK, IS_VALID) to ./eopatches_small/eopatch_5_tmp_1570094367.269969\mask\IS_VALID.npy
+2019-10-03 12:19:27,285 eolearn.core.eodata DEBUG    Saving (FeatureType.MASK_TIMELESS, VALID_COUNT) to ./eopatches_small/eopatch_5_tmp_1570094367.269969\mask_timeless\VALID_COUNT.npy
+2019-10-03 12:19:27,285 eolearn.core.eodata DEBUG    Saving (FeatureType.META_INFO, None) to ./eopatches_small/eopatch_5_tmp_1570094367.269969\meta_info.pkl
+2019-10-03 12:19:27,285 eolearn.core.eodata DEBUG    Saving (FeatureType.BBOX, None) to ./eopatches_small/eopatch_5_tmp_1570094367.269969\bbox.pkl
+2019-10-03 12:19:27,301 eolearn.core.eodata DEBUG    Saving (FeatureType.TIMESTAMP, None) to ./eopatches_small/eopatch_5_tmp_1570094367.269969\timestamp.pkl
+2019-10-03 12:19:27,316 eolearn.core.eoworkflow DEBUG    Removing intermediate result for SaveToDisk
+2019-10-03 12:19:27,316 eolearn.core.eoworkflow DEBUG    Workflow finished with WorkflowResults(
+  Dependency(SaveToDisk):
+    EOPatch(
+      data: {
+        BANDS: numpy.ndarray(shape=(1, 257, 240, 6), dtype=float32)
+        CLP: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+        NBR: numpy.ndarray(shape=(1, 257, 240, 1), dtype=float32)
+      }
+      mask: {
+        CLM: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+        IS_DATA: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+        IS_VALID: numpy.ndarray(shape=(1, 257, 240, 1), dtype=bool)
+      }
+      scalar: {}
+      label: {}
+      vector: {}
+      data_timeless: {}
+      mask_timeless: {
+        VALID_COUNT: numpy.ndarray(shape=(257, 240, 1), dtype=int64)
+      }
+      scalar_timeless: {}
+      label_timeless: {}
+      vector_timeless: {}
+      meta_info: {
+        maxcc: 0.8
+        service_type: 'wcs'
+        size_x: '10m'
+        size_y: '10m'
+        time_difference: datetime.timedelta(days=-1, seconds=86399)
+        time_interval: ['2019-04-18', '2019-04-20']
+      }
+      bbox: BBox(((523716.9414061075, 5724655.036680756), (526118.5742464965, 5727228.931828612)), crs=EPSG:32635)
+      timestamp: [datetime.datetime(2019, 4, 19, 9, 34, 38)]
+    )
+)
