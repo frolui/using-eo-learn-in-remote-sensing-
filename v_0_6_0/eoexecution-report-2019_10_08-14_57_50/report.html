@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        .hll { background-color: #ffffcc }
+.c { color: #408080; font-style: italic } /* Comment */
+.err { border: 1px solid #FF0000 } /* Error */
+.k { color: #008000; font-weight: bold } /* Keyword */
+.o { color: #666666 } /* Operator */
+.ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.cp { color: #BC7A00 } /* Comment.Preproc */
+.cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.c1 { color: #408080; font-style: italic } /* Comment.Single */
+.cs { color: #408080; font-style: italic } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.gr { color: #FF0000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #888888 } /* Generic.Output */
+.gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0044DD } /* Generic.Traceback */
+.kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #008000 } /* Keyword.Pseudo */
+.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #B00040 } /* Keyword.Type */
+.m { color: #666666 } /* Literal.Number */
+.s { color: #BA2121 } /* Literal.String */
+.na { color: #7D9029 } /* Name.Attribute */
+.nb { color: #008000 } /* Name.Builtin */
+.nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.no { color: #880000 } /* Name.Constant */
+.nd { color: #AA22FF } /* Name.Decorator */
+.ni { color: #999999; font-weight: bold } /* Name.Entity */
+.ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.nf { color: #0000FF } /* Name.Function */
+.nl { color: #A0A000 } /* Name.Label */
+.nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.nt { color: #008000; font-weight: bold } /* Name.Tag */
+.nv { color: #19177C } /* Name.Variable */
+.ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mb { color: #666666 } /* Literal.Number.Bin */
+.mf { color: #666666 } /* Literal.Number.Float */
+.mh { color: #666666 } /* Literal.Number.Hex */
+.mi { color: #666666 } /* Literal.Number.Integer */
+.mo { color: #666666 } /* Literal.Number.Oct */
+.sa { color: #BA2121 } /* Literal.String.Affix */
+.sb { color: #BA2121 } /* Literal.String.Backtick */
+.sc { color: #BA2121 } /* Literal.String.Char */
+.dl { color: #BA2121 } /* Literal.String.Delimiter */
+.sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #BA2121 } /* Literal.String.Double */
+.se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.sh { color: #BA2121 } /* Literal.String.Heredoc */
+.si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.sx { color: #008000 } /* Literal.String.Other */
+.sr { color: #BB6688 } /* Literal.String.Regex */
+.s1 { color: #BA2121 } /* Literal.String.Single */
+.ss { color: #19177C } /* Literal.String.Symbol */
+.bp { color: #008000 } /* Name.Builtin.Pseudo */
+.fm { color: #0000FF } /* Name.Function.Magic */
+.vc { color: #19177C } /* Name.Variable.Class */
+.vg { color: #19177C } /* Name.Variable.Global */
+.vi { color: #19177C } /* Name.Variable.Instance */
+.vm { color: #19177C } /* Name.Variable.Magic */
+.il { color: #666666 } /* Literal.Number.Integer.Long */
+
+        h1 {
+            text-align: center;
+        }
+
+        h2, h3, h4 {
+            margin-block-end: 0px;
+        }
+
+        p {
+            overflow: auto;
+        }
+
+        .indent {
+            margin-left: 20px;
+            overflow: auto;
+        }
+
+        .margined-div {
+            margin-block-start: 1em
+        }
+
+        .exec-status {
+            color: black;
+            padding: 10px 10px;
+            margin: 1px;
+            border-radius: 4px;
+            float: left;
+        }
+
+        .exec-finished {
+            background-color: green;
+        }
+
+        .exec-failed {
+            background-color: red;
+        }
+
+        .collapsible-content {
+          padding: 0 18px;
+          display: none;
+          overflow: hidden;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1> EOExecution Report </h1>
+
+    <h2> EOWorkflow dependency graph </h2>
+
+    <div class="indent">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAABmJLR0QA/wD/AP+gvaeTAAAAJ0lEQVQYlWP8////fwbiQA4TkQoZGBgYGEYV00cxCwMDQxGRao8AAJOeBbYynJhqAAAAAElFTkSuQmCC" />
+    </div>
+
+    <h2> Execution status </h2>
+
+    <div class="indent">
+
+        <ul>
+            <li>
+                Start time: 14:57:50 10/08/19 
+            </li>
+            <li>
+                End time: 14:57:50 10/08/19 
+            </li>
+            <li>
+                Duration: 0:00:00.046800
+            </li>
+            <li>
+                Number of finished executions: 0
+            </li>
+            <li>
+                Number of failed executions: 9
+            </li>
+            <li>
+                Processing type: multithreading
+            </li>
+            <li>
+                Number of workers: 5
+            </li>
+        </ul>
+
+        <p>
+            
+                <a class="exec-status exec-failed"
+                   title="Execution 1"
+                   href="#execution1"
+                ></a>
+            
+                <a class="exec-status exec-failed"
+                   title="Execution 2"
+                   href="#execution2"
+                ></a>
+            
+                <a class="exec-status exec-failed"
+                   title="Execution 3"
+                   href="#execution3"
+                ></a>
+            
+                <a class="exec-status exec-failed"
+                   title="Execution 4"
+                   href="#execution4"
+                ></a>
+            
+                <a class="exec-status exec-failed"
+                   title="Execution 5"
+                   href="#execution5"
+                ></a>
+            
+                <a class="exec-status exec-failed"
+                   title="Execution 6"
+                   href="#execution6"
+                ></a>
+            
+                <a class="exec-status exec-failed"
+                   title="Execution 7"
+                   href="#execution7"
+                ></a>
+            
+                <a class="exec-status exec-failed"
+                   title="Execution 8"
+                   href="#execution8"
+                ></a>
+            
+                <a class="exec-status exec-failed"
+                   title="Execution 9"
+                   href="#execution9"
+                ></a>
+            
+        </p>
+
+        <div class="indent">
+            <a class="exec-status exec-finished"></a> &nbsp;... Execution successfully finished
+        </div>
+        <div class="indent">
+            <a class="exec-status exec-failed"></a> &nbsp;... Execution failed because of an error
+        </div>
+
+    </div>
+
+    <h2> EOTasks </h2>
+
+    <div class="indent">
+
+        <h3> Initialization parameters </h3>
+
+        <div class="indent">
+        
+            <h4> ExportToTiff (ExportToTiff_b97b9f) </h4>
+
+            
+                <ul>
+                    
+                        <li> <pre> feature = (&lt;FeatureType.DATA: 'data'&gt;, 'NBR') </pre> </li>
+                    
+                </ul>
+            
+
+        
+        </div>
+
+        <h3> Source code of custom tasks </h3>
+
+        <div class="indent">
+            
+        </div>
+    </div>
+
+    <h2> Execution details </h2>
+
+    <div class="indent">
+        
+            <h3 id="execution1"> Execution 1 </h3>
+
+            <div class="indent">
+                Statistics<br/>
+                <ul>
+                    <li>Start time: 14:57:50 10/08/19 </li>
+                    <li>End time: 14:57:50 10/08/19 </li>
+                    <li>Duration: 0:00:00</li>
+                </ul>
+                
+                    Error<br/>
+                    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+
+<span class="gt">During handling of the above exception, another exception occurred:</span>
+
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoexecution.py&quot;</span>, line <span class="m">161</span>, in <span class="n">_execute_workflow</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">workflow</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">input_args</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">172</span>, in <span class="n">execute</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">WorkflowResults</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_execute_tasks</span><span class="p">(</span><span class="n">input_args</span><span class="o">=</span><span class="n">input_args</span><span class="p">,</span> <span class="n">out_degs</span><span class="o">=</span><span class="n">out_degs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">))</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">210</span>, in <span class="n">_execute_tasks</span>
+    <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">243</span>, in <span class="n">_execute_task</span>
+    <span class="k">return</span> <span class="n">task</span><span class="p">(</span><span class="o">*</span><span class="n">inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_inputs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">59</span>, in <span class="n">__call__</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execute_handling</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">85</span>, in <span class="n">_execute_handling</span>
+    <span class="k">raise</span> <span class="n">extended_exception</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">traceback</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">During execution of task ExportToTiff: execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+</pre></div>
+</td></tr></table>
+                
+
+                <button class="collapsible">Logs</button>
+                <div class="collapsible-content">
+                  <pre>None</pre>
+                </div>
+            </div>
+        
+            <h3 id="execution2"> Execution 2 </h3>
+
+            <div class="indent">
+                Statistics<br/>
+                <ul>
+                    <li>Start time: 14:57:50 10/08/19 </li>
+                    <li>End time: 14:57:50 10/08/19 </li>
+                    <li>Duration: 0:00:00.015600</li>
+                </ul>
+                
+                    Error<br/>
+                    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+
+<span class="gt">During handling of the above exception, another exception occurred:</span>
+
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoexecution.py&quot;</span>, line <span class="m">161</span>, in <span class="n">_execute_workflow</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">workflow</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">input_args</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">172</span>, in <span class="n">execute</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">WorkflowResults</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_execute_tasks</span><span class="p">(</span><span class="n">input_args</span><span class="o">=</span><span class="n">input_args</span><span class="p">,</span> <span class="n">out_degs</span><span class="o">=</span><span class="n">out_degs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">))</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">210</span>, in <span class="n">_execute_tasks</span>
+    <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">243</span>, in <span class="n">_execute_task</span>
+    <span class="k">return</span> <span class="n">task</span><span class="p">(</span><span class="o">*</span><span class="n">inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_inputs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">59</span>, in <span class="n">__call__</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execute_handling</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">85</span>, in <span class="n">_execute_handling</span>
+    <span class="k">raise</span> <span class="n">extended_exception</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">traceback</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">During execution of task ExportToTiff: execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+</pre></div>
+</td></tr></table>
+                
+
+                <button class="collapsible">Logs</button>
+                <div class="collapsible-content">
+                  <pre>None</pre>
+                </div>
+            </div>
+        
+            <h3 id="execution3"> Execution 3 </h3>
+
+            <div class="indent">
+                Statistics<br/>
+                <ul>
+                    <li>Start time: 14:57:50 10/08/19 </li>
+                    <li>End time: 14:57:50 10/08/19 </li>
+                    <li>Duration: 0:00:00.015600</li>
+                </ul>
+                
+                    Error<br/>
+                    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+
+<span class="gt">During handling of the above exception, another exception occurred:</span>
+
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoexecution.py&quot;</span>, line <span class="m">161</span>, in <span class="n">_execute_workflow</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">workflow</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">input_args</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">172</span>, in <span class="n">execute</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">WorkflowResults</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_execute_tasks</span><span class="p">(</span><span class="n">input_args</span><span class="o">=</span><span class="n">input_args</span><span class="p">,</span> <span class="n">out_degs</span><span class="o">=</span><span class="n">out_degs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">))</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">210</span>, in <span class="n">_execute_tasks</span>
+    <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">243</span>, in <span class="n">_execute_task</span>
+    <span class="k">return</span> <span class="n">task</span><span class="p">(</span><span class="o">*</span><span class="n">inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_inputs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">59</span>, in <span class="n">__call__</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execute_handling</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">85</span>, in <span class="n">_execute_handling</span>
+    <span class="k">raise</span> <span class="n">extended_exception</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">traceback</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">During execution of task ExportToTiff: execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+</pre></div>
+</td></tr></table>
+                
+
+                <button class="collapsible">Logs</button>
+                <div class="collapsible-content">
+                  <pre>None</pre>
+                </div>
+            </div>
+        
+            <h3 id="execution4"> Execution 4 </h3>
+
+            <div class="indent">
+                Statistics<br/>
+                <ul>
+                    <li>Start time: 14:57:50 10/08/19 </li>
+                    <li>End time: 14:57:50 10/08/19 </li>
+                    <li>Duration: 0:00:00.015600</li>
+                </ul>
+                
+                    Error<br/>
+                    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+
+<span class="gt">During handling of the above exception, another exception occurred:</span>
+
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoexecution.py&quot;</span>, line <span class="m">161</span>, in <span class="n">_execute_workflow</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">workflow</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">input_args</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">172</span>, in <span class="n">execute</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">WorkflowResults</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_execute_tasks</span><span class="p">(</span><span class="n">input_args</span><span class="o">=</span><span class="n">input_args</span><span class="p">,</span> <span class="n">out_degs</span><span class="o">=</span><span class="n">out_degs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">))</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">210</span>, in <span class="n">_execute_tasks</span>
+    <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">243</span>, in <span class="n">_execute_task</span>
+    <span class="k">return</span> <span class="n">task</span><span class="p">(</span><span class="o">*</span><span class="n">inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_inputs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">59</span>, in <span class="n">__call__</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execute_handling</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">85</span>, in <span class="n">_execute_handling</span>
+    <span class="k">raise</span> <span class="n">extended_exception</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">traceback</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">During execution of task ExportToTiff: execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+</pre></div>
+</td></tr></table>
+                
+
+                <button class="collapsible">Logs</button>
+                <div class="collapsible-content">
+                  <pre>None</pre>
+                </div>
+            </div>
+        
+            <h3 id="execution5"> Execution 5 </h3>
+
+            <div class="indent">
+                Statistics<br/>
+                <ul>
+                    <li>Start time: 14:57:50 10/08/19 </li>
+                    <li>End time: 14:57:50 10/08/19 </li>
+                    <li>Duration: 0:00:00</li>
+                </ul>
+                
+                    Error<br/>
+                    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+
+<span class="gt">During handling of the above exception, another exception occurred:</span>
+
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoexecution.py&quot;</span>, line <span class="m">161</span>, in <span class="n">_execute_workflow</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">workflow</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">input_args</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">172</span>, in <span class="n">execute</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">WorkflowResults</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_execute_tasks</span><span class="p">(</span><span class="n">input_args</span><span class="o">=</span><span class="n">input_args</span><span class="p">,</span> <span class="n">out_degs</span><span class="o">=</span><span class="n">out_degs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">))</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">210</span>, in <span class="n">_execute_tasks</span>
+    <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">243</span>, in <span class="n">_execute_task</span>
+    <span class="k">return</span> <span class="n">task</span><span class="p">(</span><span class="o">*</span><span class="n">inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_inputs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">59</span>, in <span class="n">__call__</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execute_handling</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">85</span>, in <span class="n">_execute_handling</span>
+    <span class="k">raise</span> <span class="n">extended_exception</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">traceback</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">During execution of task ExportToTiff: execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+</pre></div>
+</td></tr></table>
+                
+
+                <button class="collapsible">Logs</button>
+                <div class="collapsible-content">
+                  <pre>None</pre>
+                </div>
+            </div>
+        
+            <h3 id="execution6"> Execution 6 </h3>
+
+            <div class="indent">
+                Statistics<br/>
+                <ul>
+                    <li>Start time: 14:57:50 10/08/19 </li>
+                    <li>End time: 14:57:50 10/08/19 </li>
+                    <li>Duration: 0:00:00</li>
+                </ul>
+                
+                    Error<br/>
+                    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+
+<span class="gt">During handling of the above exception, another exception occurred:</span>
+
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoexecution.py&quot;</span>, line <span class="m">161</span>, in <span class="n">_execute_workflow</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">workflow</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">input_args</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">172</span>, in <span class="n">execute</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">WorkflowResults</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_execute_tasks</span><span class="p">(</span><span class="n">input_args</span><span class="o">=</span><span class="n">input_args</span><span class="p">,</span> <span class="n">out_degs</span><span class="o">=</span><span class="n">out_degs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">))</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">210</span>, in <span class="n">_execute_tasks</span>
+    <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">243</span>, in <span class="n">_execute_task</span>
+    <span class="k">return</span> <span class="n">task</span><span class="p">(</span><span class="o">*</span><span class="n">inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_inputs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">59</span>, in <span class="n">__call__</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execute_handling</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">85</span>, in <span class="n">_execute_handling</span>
+    <span class="k">raise</span> <span class="n">extended_exception</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">traceback</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">During execution of task ExportToTiff: execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+</pre></div>
+</td></tr></table>
+                
+
+                <button class="collapsible">Logs</button>
+                <div class="collapsible-content">
+                  <pre>None</pre>
+                </div>
+            </div>
+        
+            <h3 id="execution7"> Execution 7 </h3>
+
+            <div class="indent">
+                Statistics<br/>
+                <ul>
+                    <li>Start time: 14:57:50 10/08/19 </li>
+                    <li>End time: 14:57:50 10/08/19 </li>
+                    <li>Duration: 0:00:00</li>
+                </ul>
+                
+                    Error<br/>
+                    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+
+<span class="gt">During handling of the above exception, another exception occurred:</span>
+
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoexecution.py&quot;</span>, line <span class="m">161</span>, in <span class="n">_execute_workflow</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">workflow</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">input_args</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">172</span>, in <span class="n">execute</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">WorkflowResults</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_execute_tasks</span><span class="p">(</span><span class="n">input_args</span><span class="o">=</span><span class="n">input_args</span><span class="p">,</span> <span class="n">out_degs</span><span class="o">=</span><span class="n">out_degs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">))</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">210</span>, in <span class="n">_execute_tasks</span>
+    <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">243</span>, in <span class="n">_execute_task</span>
+    <span class="k">return</span> <span class="n">task</span><span class="p">(</span><span class="o">*</span><span class="n">inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_inputs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">59</span>, in <span class="n">__call__</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execute_handling</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">85</span>, in <span class="n">_execute_handling</span>
+    <span class="k">raise</span> <span class="n">extended_exception</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">traceback</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">During execution of task ExportToTiff: execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+</pre></div>
+</td></tr></table>
+                
+
+                <button class="collapsible">Logs</button>
+                <div class="collapsible-content">
+                  <pre>None</pre>
+                </div>
+            </div>
+        
+            <h3 id="execution8"> Execution 8 </h3>
+
+            <div class="indent">
+                Statistics<br/>
+                <ul>
+                    <li>Start time: 14:57:50 10/08/19 </li>
+                    <li>End time: 14:57:50 10/08/19 </li>
+                    <li>Duration: 0:00:00</li>
+                </ul>
+                
+                    Error<br/>
+                    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+
+<span class="gt">During handling of the above exception, another exception occurred:</span>
+
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoexecution.py&quot;</span>, line <span class="m">161</span>, in <span class="n">_execute_workflow</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">workflow</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">input_args</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">172</span>, in <span class="n">execute</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">WorkflowResults</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_execute_tasks</span><span class="p">(</span><span class="n">input_args</span><span class="o">=</span><span class="n">input_args</span><span class="p">,</span> <span class="n">out_degs</span><span class="o">=</span><span class="n">out_degs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">))</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">210</span>, in <span class="n">_execute_tasks</span>
+    <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">243</span>, in <span class="n">_execute_task</span>
+    <span class="k">return</span> <span class="n">task</span><span class="p">(</span><span class="o">*</span><span class="n">inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_inputs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">59</span>, in <span class="n">__call__</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execute_handling</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">85</span>, in <span class="n">_execute_handling</span>
+    <span class="k">raise</span> <span class="n">extended_exception</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">traceback</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">During execution of task ExportToTiff: execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+</pre></div>
+</td></tr></table>
+                
+
+                <button class="collapsible">Logs</button>
+                <div class="collapsible-content">
+                  <pre>None</pre>
+                </div>
+            </div>
+        
+            <h3 id="execution9"> Execution 9 </h3>
+
+            <div class="indent">
+                Statistics<br/>
+                <ul>
+                    <li>Start time: 14:57:50 10/08/19 </li>
+                    <li>End time: 14:57:50 10/08/19 </li>
+                    <li>Duration: 0:00:00</li>
+                </ul>
+                
+                    Error<br/>
+                    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+
+<span class="gt">During handling of the above exception, another exception occurred:</span>
+
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoexecution.py&quot;</span>, line <span class="m">161</span>, in <span class="n">_execute_workflow</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">workflow</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">input_args</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">172</span>, in <span class="n">execute</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">WorkflowResults</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_execute_tasks</span><span class="p">(</span><span class="n">input_args</span><span class="o">=</span><span class="n">input_args</span><span class="p">,</span> <span class="n">out_degs</span><span class="o">=</span><span class="n">out_degs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">))</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">210</span>, in <span class="n">_execute_tasks</span>
+    <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eoworkflow.py&quot;</span>, line <span class="m">243</span>, in <span class="n">_execute_task</span>
+    <span class="k">return</span> <span class="n">task</span><span class="p">(</span><span class="o">*</span><span class="n">inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kw_inputs</span><span class="p">,</span> <span class="n">monitor</span><span class="o">=</span><span class="n">monitor</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">59</span>, in <span class="n">__call__</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execute_handling</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">85</span>, in <span class="n">_execute_handling</span>
+    <span class="k">raise</span> <span class="n">extended_exception</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">traceback</span><span class="p">)</span>
+  File <span class="nb">&quot;c:\users\frolui\appdata\local\programs\python\python37\lib\site-packages\eolearn\core\eotask.py&quot;</span>, line <span class="m">72</span>, in <span class="n">_execute_handling</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="o">*</span><span class="n">eopatches</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gr">TypeError</span>: <span class="n">During execution of task ExportToTiff: execute() missing 1 required positional argument: &#39;eopatch&#39;</span>
+</pre></div>
+</td></tr></table>
+                
+
+                <button class="collapsible">Logs</button>
+                <div class="collapsible-content">
+                  <pre>None</pre>
+                </div>
+            </div>
+        
+    </div>
+
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+</body>
+</html>
